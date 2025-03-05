@@ -8,6 +8,7 @@ namespace DevopsTesting.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        int a;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
