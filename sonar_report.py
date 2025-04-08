@@ -2,6 +2,8 @@ import os
 import requests
 
 SONAR_TOKEN = os.getenv("SONAR_TOKEN")
+sonarqube_url = os.getenv("SONARQUBE_URL")
+print("SonarQube URL from env:", sonarqube_url)
 SONAR_HOST_URL = os.getenv("SONAR_HOST_URL")
 PROJECT_KEY = "Amal.NET"
 
