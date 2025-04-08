@@ -3,14 +3,15 @@ import requests
 
 SONAR_TOKEN = os.getenv("SONAR_TOKEN")
 sonarqube_url = os.getenv("SONARQUBE_URL")
-print("SonarQube URL from env:", sonarqube_url)
-SONAR_HOST_URL = os.getenv("SONAR_HOST_URL")
 PROJECT_KEY = "Amal.NET"
+
+print("SonarQube URL from env:", sonarqube_url)
+print("SonarQube Token set:", "YES" if SONAR_TOKEN else "NO")
 
 auth = (SONAR_TOKEN, '')
 
 response = requests.get(
-    f"{SONAR_HOST_URL}/api/issues/search?componentKeys={PROJECT_KEY}",
+    f"{sonarqube_url}/api/issues/search?componentKeys={PROJECT_KEY}",
     auth=auth
 )
 
