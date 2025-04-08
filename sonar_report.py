@@ -9,8 +9,8 @@ PROJECT_KEY = "Amal.NET"
 auth = (SONAR_TOKEN, '')
 
 # Fetch issues
-issues_url = f"{SONAR_HOST_URL}/api/issues/search?componentKeys={PROJECT_KEY}"
-metrics_url = f"{SONAR_HOST_URL}/api/measures/component?component={PROJECT_KEY}&metricKeys=bugs,vulnerabilities,code_smells,coverage,duplicated_lines_density,ncloc,security_hotspots,security_review_rating"
+issues_url = f"{SONARQUBE_URL}/api/issues/search?componentKeys={PROJECT_KEY}"
+metrics_url = f"{SONARQUBE_URL}/api/measures/component?component={PROJECT_KEY}&metricKeys=bugs,vulnerabilities,code_smells,coverage,duplicated_lines_density,ncloc,security_hotspots,security_review_rating"
 
 issues_resp = requests.get(issues_url, auth=auth)
 metrics_resp = requests.get(metrics_url, auth=auth)
